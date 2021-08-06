@@ -449,8 +449,7 @@ list_settings = '{"inline_keyboard": ['
 ..'[{"text": "- رجوع »","callback_data": "CmdBack"},{"text": "- اخفاء الامر","callback_data": "LoginOut"}]'
 ..']}'
 msg.KeyboardCmd = list_settings
-textMD = [[ ﹎﹎﹎ اوامر اخرى ﹎﹎﹎
-• سيتم تحديثها قريباً
+textMD = [[ سيتم اضافتها قريباََ
 ]]
 GetUserID(msg.sender_user_id_,function(arg,data)
 msg = arg.msg
@@ -997,7 +996,7 @@ if edit then EditMsg(msg.chat_id_,msg.id_,'60% - |███████  @khl140
 download_file('https://raw.githubusercontent.com/AL-Ma-Sa/Al-MaSa/main/MaSa/Script.lua','./YEMEN/Script.lua')
 if edit then EditMsg(msg.chat_id_,msg.id_,'80% - |█████████ @khl1404k  |') end
 download_file('https://raw.githubusercontent.com/AL-Ma-Sa/Al-MaSa/main/MaSa/functions.lua','./YEMEN/functions.lua')
-if edit then EditMsg(msg.chat_id_,msg.id_,'100% - |█████████████|\n\n تم تحديث السورس الى اصدار *v'..redis:get(js..":VERSION")..'*\n تم اعاده تشغيل السورس بنجاح\n Ch : *@khI404k*') endif edit then dofile("./MaSa/Run.lua") end
+if edit then EditMsg(msg.chat_id_,msg.id_,'100% - |█████████████|\n\n تم تحديث السورس الى اصدار *v'..redis:get(js..":VERSION")..'*\n تم اعاده تشغيل السورس بنجاح\n Ch : *@diamondsabot*') endif edit then dofile("./MaSa/Run.lua") end
 print("Update Source And Reload ~ ./MaSa/Run.lua")
 
 end
@@ -1063,10 +1062,10 @@ Name = data.first_name_ .." "..data.last_name_
 else 
 Name = data.first_name_ 
 end
-usernn = data.username_ or "khl404k"
+usernn = data.username_ or "diamondsabot"
 else 
 Name = data.title_
-usernn = data.type_.user_.username_ or "khl404k"
+usernn = data.type_.user_.username_ or "diamondsabot"
 end
 Name = Name:gsub('[[][]]','')
 Name = FlterName(Name,10)
@@ -1484,7 +1483,7 @@ local info  = redis:hgetall(js..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..i.."-l ["..info.username..'] \n'
 else
-message = message ..i.. '-l ['..info.username..'](t.me/khl404k) \n'
+message = message ..i.. '-l ['..info.username..'](t.me/diamondsabot) \n'
 end
 
 i=i+1
@@ -1496,7 +1495,7 @@ local info  = redis:hgetall(js..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..i.."-l ["..info.username..'] \n'
 else
-message = message ..i.. '-l ['..info.username..'](t.me/khl404k) \n'
+message = message ..i.. '-l ['..info.username..'](t.me/diamondsabot) \n'
 end
 i=i+1
 end 
@@ -1507,7 +1506,7 @@ local info  = redis:hgetall(js..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..i.."-l ["..info.username..'] \n'
 else
-message = message ..i.. '-l ['..info.username..'](t.me/khl404k) \n'
+message = message ..i.. '-l ['..info.username..'](t.me/diamondsabot) \n'
 end
 i=i+1
 end 
@@ -1518,7 +1517,7 @@ local info  = redis:hgetall(js..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..i.."-l ["..info.username..'] \n'
 else
-message = message ..i.. '-l ['..info.username..'](t.me/khl404k) \n'
+message = message ..i.. '-l ['..info.username..'](t.me/diamondsabot) \n'
 end
 i=i+1
 end 
@@ -1530,7 +1529,7 @@ local info  = redis:hgetall(js..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..i.."-l ["..info.username..'] \n'
 else
-message = message ..i.. '-l ['..info.username..'](t.me/khl404k) \n'
+message = message ..i.. '-l ['..info.username..'](t.me/diamondsabot) \n'
 end
 i=i+1
 end 
@@ -1549,7 +1548,7 @@ local count = redis:scard(js..'mtwr_count'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.."-l ["..info.username..'] » (`' ..v.. '`){'..count..'} \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/khl404k) l » (`' ..v.. '`){'..count..'} \n'
+message = message ..k.. '-l ['..info.username..'](t.me/diamondsabot) l » (`' ..v.. '`){'..count..'} \n'
 end
 end 
 end
@@ -1575,7 +1574,7 @@ local info = redis:hgetall(js..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.."-l ["..info.username..'] » (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/khl404k) l » (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/diamondsabot) l » (`' ..v.. '`) \n'
 end
 end
 end
@@ -1590,7 +1589,7 @@ local info = redis:hgetall(js..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.."-l ["..info.username..'] » (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/khl404k) l » (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/diamondsabot) l » (`' ..v.. '`) \n'
 end
 end
 end
@@ -1609,7 +1608,7 @@ local info = redis:hgetall(js..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.. '-l ['..(info.username or '')..'] » (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/khl404k) l » (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/diamondsabot) l » (`' ..v.. '`) \n'
 end
 end
 end
@@ -1632,7 +1631,7 @@ local info = redis:hgetall(js..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.. '-l ['..(info.username or '')..'] » (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/khl404k) l » (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/diamondsabot) l » (`' ..v.. '`) \n'
 end
 end
 end
@@ -1654,7 +1653,7 @@ local info = redis:hgetall(js..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.. '-l ['..info.username..'] » (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/khl404k) l » (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/diamondsabot) l » (`' ..v.. '`) \n'
 end
 end
 if utf8.len(message) > 4096 then
@@ -1675,7 +1674,7 @@ local info = redis:hgetall(js..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.. '-l ['..info.username..'] » (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/khl404k) l » (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/diamondsabot) l » (`' ..v.. '`) \n'
 end
 end
 if utf8.len(message) > 4096 then
@@ -1697,7 +1696,7 @@ local info = redis:hgetall(js..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.. '-l ['..info.username..'] ⇝ (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/khl404k) l ⇝ (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/diamondsabot) l ⇝ (`' ..v.. '`) \n'
 end
 end
 if utf8.len(message) > 4096 then
@@ -1717,7 +1716,7 @@ local info = redis:hgetall(js..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.. '-l ['..info.username..'] » (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/khl404k) l » (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/diamondsabot) l » (`' ..v.. '`) \n'
 end
 end
 if utf8.len(message) > 4096 then
@@ -1737,7 +1736,7 @@ local info = redis:hgetall(js..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.. '-l ['..info.username..'] » (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/khl404k) l » (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/diamondsabot) l » (`' ..v.. '`) \n'
 end
 end
 if utf8.len(message) > 4096 then
@@ -1757,7 +1756,7 @@ local info = redis:hgetall(js..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.. '-l ['..info.username..'] » (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/khl404k) l » (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/diamondsabot) l » (`' ..v.. '`) \n'
 end
 end
 if utf8.len(message) > 4096 then
@@ -1777,7 +1776,7 @@ local info = redis:hgetall(js..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.. '-l ['..info.username..'] » (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/khl404k) l » (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/diamondsabot) l » (`' ..v.. '`) \n'
 end
 end
 if utf8.len(message) > 4096 then
@@ -1812,7 +1811,7 @@ local info = redis:hgetall(js..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.. '-l ['..info.username..'] » (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/khl404k) l » (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/diamondsabot) l » (`' ..v.. '`) \n'
 end
 end
 if utf8.len(message) > 4096 then
@@ -1843,7 +1842,7 @@ local info = redis:hgetall(js..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.. '-l ['..info.username..'] » (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/khl404k) l » (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/diamondsabot) l » (`' ..v.. '`) \n'
 end 
 end 
 if utf8.len(message) > 4096 then
@@ -1862,7 +1861,7 @@ local info = redis:hgetall(js..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.. '-l ['..info.username..'] » (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/khl404k) l » (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/diamondsabot) l » (`' ..v.. '`) \n'
 end 
 end 
 if utf8.len(message) > 4096 then
@@ -1892,7 +1891,7 @@ local info = redis:hgetall(js..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.. '-l ['..info.username..'] » (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/khl404k) l » (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/diamondsabot) l » (`' ..v.. '`) \n'
 end
 end 
 if utf8.len(message) > 4096 then
@@ -2215,7 +2214,6 @@ js..'lock_webpage'..arg.chat_id_,true,
 js..'lock_markdown'..arg.chat_id_,true,
 js..'lock_flood'..arg.chat_id_,true,
 js..'lock_bots'..arg.chat_id_,true,
-js..'lock_bots_by_kick'..arg.chat_id_,true,
 js..'mute_forward'..arg.chat_id_,true,
 js..'mute_contact'..arg.chat_id_,true,
 js..'mute_location'..arg.chat_id_,true,
