@@ -205,7 +205,7 @@ local url , res = https.request(ApiToken..'/getChatAdministrators?chat_id='..msg
 local get = JSON.decode(url)
 for k,v in pairs(get.result) do
 if v.status == "creator" and v.user.first_name ~= "" then
-return sendMsg(msg.chat_id_,msg.id_,"♔ المالك :\n["..v.user.first_name.."](t.me/"..(v.user.username or "khl404k"))
+return sendMsg(msg.chat_id_,msg.id_,"♔ المالك :\n["..v.user.first_name.."](t.me/"..(v.user.username or "DIAMONDSABOT"))
 end
 end
 
@@ -223,7 +223,7 @@ mmmmm = arg.UserName:gsub("@","")
 sendMsg(arg.ChatID,arg.MsgID,"¤⁞ المالك :\n["..data.title_.."](t.me/"..mmmmm..")")
 end,{ChatID=msg.chat_id_,MsgID=msg.id_,UserName=info.username})
 else
-sendMsg(msg.chat_id_,msg.id_,'✲ المالك :\n['..info.username..'](t.me/khl404k)  \n')
+sendMsg(msg.chat_id_,msg.id_,'✲ المالك :\n['..info.username..'](t.me/DIAMONDSABOT)  \n')
 end
 
 break
@@ -3955,7 +3955,7 @@ sendMsg(msg.chat_id_,msg.id_,' ♨⁞  يوجد تحديث جديد الان \n 
 redis:set(js..":VERSION",GetVerison)
 return false
 else
-return "♨⁞ الاصدار الحالي : *v"..version.."* \n ♨⁞  لديـك احدث اصدار\n - [EaGlE](t.me/khl404k)"
+return "♨⁞ الاصدار الحالي : *v"..version.."* \n ♨⁞  لديـك احدث اصدار\n - [EaGlE](t.me/DIAMONDSABOT)"
 end
 return false
 end
@@ -4015,8 +4015,8 @@ end
 if MsgText[1]== "ايدي" and msg.type == "pv" then return  "\n"..msg.sender_user_id_.."\n"  end
 
 if MsgText[1]== "قناة السورس" and msg.type == "pv" then
-local inline = {{{text="قناه‏‏ السـورس : نيـزك ",url="t.me/khl404k"}}}
-send_key(msg.sender_user_id_,'  [قناة السورس: نيـزك](t.me/khl404k)',nil,inline,msg.id_)
+local inline = {{{text="قناه‏‏ سـورس : الماسـه ",url="t.me/DIAMONDSABOT"}}}
+send_key(msg.sender_user_id_,'  [قناة سورس : الماسـه](t.me/DIAMONDSABOT)',nil,inline,msg.id_)
 return false
 end
 
@@ -4704,8 +4704,8 @@ if MsgText[1] == "سورس" or MsgText[1]=="السورس" then
 return [[
 *[+] TEAM AL-MaSa*
 
-*~* [𝗖𝗵](T.ME/khl404k) *,*
-*~* [𝗗𝗲𝘃](T.ME/khI1404k) *.*
+*~* [𝗖𝗵](T.ME/DIAMONDSABOT) *,*
+*~* [𝗗𝗲𝘃](T.ME/DIAMONDSABOT) *.*
 ]]
 end
 if MsgText[1] == "متجر الملفات" or MsgText[1]:lower() == "/store"  then
@@ -4898,9 +4898,9 @@ end
 
 text = [[*مرحبـاً أنا الماسـه .*
 
-*-* اختصاصي إدارة المجموعات من السبام والخ..
-*-* لدي مًميزات مثل {كت تويت,أغاني,يوتيوب...}, 
-*-* لتفعيلي ارفعني مشرف وارسل تفعيل.]]
+*-* اختصاصي حماية المجموعات وإدارتها
+*-* أخدم المجموعات التعليمية والهادفة
+*-* للتفعيل ارفعني مشرف وارسل تفعيل.]]
 GetUserID(msg.sender_user_id_,function(arg,data)
 if data.last_name_ then Name = data.first_name_ .." "..data.last_name_ else Name = data.first_name_ end
 text = redis:get(js..':Text_Start') or text
@@ -4916,7 +4916,7 @@ text = text:gsub("#bot",redis:get(js..':NameBot:'))
 text = text:gsub("{المطور}",SUDO_USER)
 xsudouser = SUDO_USER:gsub('@','')
 xsudouser = xsudouser:gsub([[\_]],'_')
-local inline = {{{text="¤",url="t.me/khl404k"}}}
+local inline = {{{text="¤",url="t.me/DIAMONDSABOT"}}}
 send_key(msg.sender_user_id_,text,nil,inline,msg.id_)
 end,nil)
 return false
@@ -7487,15 +7487,14 @@ local mkl = {
 
 local bott = {
 "*انت البوت*",
-"*يا روح قلب البوت*",
-"*تفضل عيـني❤*",
-"عيـونـي لك.",
-"حيـاة البوت.",
+"*تفضل آمرني*",
+"نعم آمرني.",
+"تحت أمرك.",
 "اسمي ["..Bot_Name.."] .",
 }
 
 local su = {
-  "اهلا بمطوري الحلو ..",
+  "اهلا بمطوري  ..",
   "ارحب يالمطور.",
   "هلا .",
   "عيون ["..Bot_Name.."] .",
@@ -7503,14 +7502,13 @@ local su = {
 }
   local ss97 = {
   "روح [".. Bot_Name.."].",
-"امرني يعيني .",
-  "امرني .","نعم","هاه.","شفيه",
-  "لبييه .","عيوني لك.","امرني يا حلو.",
-  "ها يا روحي.","هلا .","شتبغى.",
+"امرني  .",
+  "لبييه .","عيوني لك.","تدلل  .",
+  "أهلين.","هلا .","وش تبي.",
   "عيون ["..Bot_Name.."] .",
   }
   
-  local bs = {
+  local -- = {
 "يع اي القرف ده يعم شوفلنا حد عدل.",
 "اووف هي دي الشفايف.",
 "الوش مش مساعد.",
@@ -7527,7 +7525,7 @@ return sendMsg(msg.chat_id_,msg.id_,ss97[math.random(#ss97)])
 
 elseif Text:match("^قول (.*)$") then
 if utf8.len(Text:match("^قول (.*)$")) > 100 then 
-return sendMsg(msg.chat_id_,msg.id_,"♔ ماقدرش اقول اكتر من 100 حرف .")
+return sendMsg(msg.chat_id_,msg.id_,"♔ ماقدر اقول اكتر من 100 حرف .")
 end
 local callback_Text = FlterName(Text:match("^قول (.*)$"),100)
 if callback_Text and callback_Text == 'الاسم سبام ' then
@@ -7536,7 +7534,7 @@ else
 return sendMsg(msg.chat_id_,0,callback_Text) 
 end
 
-elseif Text:match("^بوس (.*)$") then 
+elseif Text:match("^بوسقفغ (.*)$") then 
 if msg.reply_id then 
 return sendMsg(msg.chat_id_,msg.reply_id,bs[math.random(#bs)])
 else
@@ -7560,7 +7558,7 @@ sendMsg(msg.chat_id_,msg.id_,srah[math.random(#srah)])
 elseif not msg.SudoUser and Text=="بوت" or Text == "البوت" or Text == "بوت" then
 sendMsg(msg.chat_id_,msg.id_,bott[math.random(#bott)])
 
-elseif Text== "مطور السورس" or Text== "سالم" or Text== "هيل" or Text== "ابو عمير" or Text== "عمير" or Text== "أبو عمير" then return sendMsg(msg.chat_id_,msg.id_,"[الـعَميـر.](T.ME/vorcl)")
+elseif Text== "مطور السورس" or Text== "سالم" or Text== "هيل" or Text== "ابو عمير" or Text== "عمير" or Text== "أبو عمير" then return sendMsg(msg.chat_id_,msg.id_,"[أبو ريان](T.ME/khl1404k)")
 elseif Text== "ايديي" or Text=="ايدي 🆔" then 
 GetUserID(msg.sender_user_id_,function(arg,data)
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data) end
@@ -7688,26 +7686,6 @@ Js = {
 "^(كشف) (@[%a%d_]+)$",
 '^(رفع مميز) (@[%a%d_]+)$',
 '^(رفع مميز) (%d+)$',
-'^(رفع قرد) (@[%a%d_]+)$',
-'^(رفع قرد) (%d+)$',
-'^(تنزيل قرد) (@[%a%d_]+)$', 
-'^(تنزيل قرد) (%d+)$',
-'^(رفع قلبي) (@[%a%d_]+)$',
-'^(رفع قلبي) (%d+)$',
-'^(تنزيل قلبي) (@[%a%d_]+)$', 
-'^(تنزيل قلبي) (%d+)$',
-'^(رفع وتكه) (@[%a%d_]+)$',
-'^(رفع وتكه) (%d+)$',
-'^(تنزيل وتكه) (@[%a%d_]+)$', 
-'^(تنزيل وتكه) (%d+)$',
-'^(رفع زوجي) (@[%a%d_]+)$',
-'^(رفع زوجي) (%d+)$',
-'^(تنزيل زوجي) (@[%a%d_]+)$', 
-'^(تنزيل زوجي) (%d+)$',
-'^(رفع زوجتي) (@[%a%d_]+)$',
-'^(رفع زوجتي) (%d+)$',
-'^(تنزيل زوجتي) (@[%a%d_]+)$', 
-'^(تنزيل زوجتي) (%d+)$',
 '^(تنزيل الكل) (@[%a%d_]+)$',
 '^(تنزيل الكل) (%d+)$',
 '^(تنزيل مميز) (@[%a%d_]+)$',
@@ -7810,16 +7788,6 @@ Js = {
 "^(كشف)$",
 '^(رفع مميز)$',
 '^(تنزيل مميز)$',
-'^(رفع قرد)$',
-'^(تنزيل قرد)$',
-'^(رفع قلبي)$',
-'^(تنزيل قلبي)$',
-'^(رفع وتكه)$',
-'^(تنزيل وتكه)$',
-'^(رفع زوجتي)$',
-'^(تنزيل زوجتي)$',
-'^(رفع زوجي)$',
-'^(تنزيل زوجي)$',
 '^(رفع ادمن)$',
 '^(تنزيل ادمن)$', 
 '^(رفع المدير)$',
