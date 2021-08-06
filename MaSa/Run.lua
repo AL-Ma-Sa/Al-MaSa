@@ -69,7 +69,7 @@ print('\n\27[1;31m￤ {USERNAME_NOT_OCCUPIED} => Please Check it!\n￤ لآ يو
 create_config(Token)
 end 
 GetUser.result.username = GetUser.result.username or GetUser.result.first_name
-print('\n\27[1;36m￤تم آدخآل آيدي آلمـطـور بنجآح , سـوف يتم تشـغيل سورس ايجل الآن .\n￤Success Save ID : \27[0;32m['..SUDO_USER..']\n\27[0;39;49m')
+print('\n\27[1;36m￤تم آدخآل آيدي آلمـطـور بنجآح , سـوف يتم تشـغيل سورس الماسـه الآن .\n￤Success Save ID : \27[0;32m['..SUDO_USER..']\n\27[0;39;49m')
 js = Token:match("(%d+)")
 redis:mset(
 js..":VERSION","1.0",
